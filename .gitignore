@@ -1,2 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
+backend/node_modules/
+backend/package-lock.json
+frontend/node_modules/
+frontend/package-lock.json
+mobile/node_modules/
+mobile/package-lock.json
+

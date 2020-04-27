@@ -10,15 +10,20 @@ const connection = require('./database/connection');
 
 const routes = express.Router();
 /* Login ONG's*/
-routes.post('/sessions', SessionController.create);
+routes.post('/sessions', celebrate({
+    [Segments.BODY]: Joi.object().keys({
+        id: Joi.string().required()
+    })
+}),SessionController.create);
 
 /* ONG's Criar e Lista */
 routes.get('/ongs', OngController.index);
+
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
-        whatsapp: Joi.number().required().min(13),
+        whatsapp: Joi.string().required().min(11).max(13),
         city: Joi.string().required(),
         uf: Joi.string().required().length(2)
     })
