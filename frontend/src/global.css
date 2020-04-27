@@ -77,3 +77,19 @@ form textarea{
 .back-link:hover{
     opacity: 0.8;
 }
+
+@media only screen and (max-width: 600px) {
+    *{
+        max-height: 720px;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .button{
+        align-items: center;
+    }
+    .back-link{
+        flex-direction: row;
+        margin-top: 20px;
+        margin-right: 27%;
+     }
+}

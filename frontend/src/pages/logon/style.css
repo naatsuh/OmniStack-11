@@ -23,3 +23,21 @@
     font-size: 32px;
     margin-bottom: 32px;
 }
+
+@media only screen and (max-width: 600px) {
+    .heroesImg{
+        max-width: 320px;
+        max-height: 320px;
+        margin: 0;
+    }
+    .logon-container section.form {
+        margin: 8px;
+    }
+    .logon-container section.form form{
+        margin-top: 0px;
+    }
+    .logon-container section.form form h1{
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+}
